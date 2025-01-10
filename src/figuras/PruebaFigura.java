@@ -6,62 +6,62 @@ import java.awt.Color;
 public class PruebaFigura {
 
 public static void main(String[] args) {
-int opción;
-Scanner teclado = new Scanner (System.in);
-do { 
-   opción = mostrarMenú();
-   if (opción != 4){
-      System.out.print ("Introduzca la coordenada x del centro: ");
-      double x = teclado.nextDouble();
-      System.out.print ("Introduzca la coordenada y del centro: ");
-      double y = teclado.nextDouble();
-   switch (opción)
-	   {  case 1:
-	         System.out.print ("Introduzca el lado 1 del triángulo: ");
-        	 double lado1 = teclado.nextDouble();
-	         System.out.print ("Introduzca el lado 2 del triángulo: ");
-        	 double lado2 = teclado.nextDouble();
-        	 System.out.print ("Introduzca el lado 3 del triángulo: ");
-        	 double lado3 = teclado.nextDouble();
-        	 Triángulo t = new Triángulo(x, y, Color.red, lado1, lado2, lado3);
-        	 System.out.println ("El perímetro es " + t.perímetro());
-        	 System.out.println ("El área es " + t.área());
-        	 break;
-         case 2:
-	         System.out.print ("Introduzca la base del rectángulo: ");
-        	 double base = teclado.nextDouble();
-	         System.out.print ("Introduzca la altura del rectángulo: ");
-        	 double altura = teclado.nextDouble();
-        	 Rectángulo r = new Rectángulo(x, y, Color.red, base, altura);
-        	 System.out.println ("El perímetro es " + r.perímetro());
-        	 System.out.println ("El área es " + r.área());
-        	 break;
-         case 3:
-	         System.out.print ("Introduzca el lado del cuadrado: ");
-        	 double lado = teclado.nextDouble();
-	         Cuadrado c = new Cuadrado(x, y, Color.red, lado);
-	         System.out.println ("El perímetro es " + c.perímetro());
-	         System.out.println ("El área es " + c.área());
-	         break;
-        }
-   }
-}while (opción != 4); 
-teclado.close();
-}
-
-public static int mostrarMenú(){
-int opción;
-System.out.println ("1) Triángulo");
-System.out.println ("2) Rectángulo");
-System.out.println ("3) Cuadrado");
-System.out.println ("4) Salir");
-Scanner teclado = new Scanner (System.in);
-do {
-    System.out.print ("Introduzca una opción (1-4): ");
-    opción = teclado.nextInt();
-    if (opción < 1 || opción > 4)
-	   System.out.println ("Debe introducir un número entre 1 y 4");
-   } while (opción < 1 || opción > 4);
-return opción;
-}
+	int opcion;
+	Scanner teclado = new Scanner (System.in);
+	do { 
+	   opcion = mostrarMenu();
+	   if (opcion != 4){
+	      System.out.print ("Introduzca la coordenada x del centro: ");
+	      double x = teclado.nextDouble();
+	      System.out.print ("Introduzca la coordenada y del centro: ");
+	      double y = teclado.nextDouble();
+	   switch (opcion)
+		   {  case 1:
+		         System.out.print ("Introduzca el lado 1 del triï¿½ngulo: ");
+	        	 double lado1 = teclado.nextDouble();
+		         System.out.print ("Introduzca el lado 2 del triï¿½ngulo: ");
+	        	 double lado2 = teclado.nextDouble();
+	        	 System.out.print ("Introduzca el lado 3 del triï¿½ngulo: ");
+	        	 double lado3 = teclado.nextDouble();
+	        	 TriÃ¡ngulo t = new TriÃ¡ngulo(x, y, Color.red, lado1, lado2, lado3);
+	        	 System.out.println ("El perÃ­metro es " + t.perÃ­metro());
+	        	 System.out.println ("El Ã¡rea es " + t.Ã¡rea());
+	        	 break;
+	         case 2:
+		         System.out.print ("Introduzca la base del rectÃ¡ngulo: ");
+	        	 double base = teclado.nextDouble();
+		         System.out.print ("Introduzca la altura del rectÃ¡ngulo: ");
+	        	 double altura = teclado.nextDouble();
+	        	 RectÃ¡ngulo r = new RectÃ¡ngulo(x, y, Color.red, base, altura);
+	        	 System.out.println ("El perÃ­metro es " + r.perÃ­metro());
+	        	 System.out.println ("El Ã¡rea es " + r.Ã¡rea());
+	        	 break;
+	         case 3:
+		         System.out.print ("Introduzca el lado del cuadrado: ");
+	        	 double lado = teclado.nextDouble();
+		         Cuadrado c = new Cuadrado(x, y, Color.red, lado);
+		         System.out.println ("El perÃ­metro es " + c.perÃ­metro());
+		         System.out.println ("El Ã¡rea es " + c.Ã¡rea());
+		         break;
+	        }
+	   }
+	}while (opcion != 4); 
+	teclado.close();
+	}
+	
+	public static int mostrarMenu(){
+	int opcion;
+	System.out.println ("1) Triï¿½ngulo");
+	System.out.println ("2) Rectï¿½ngulo");
+	System.out.println ("3) Cuadrado");
+	System.out.println ("4) Salir");
+	Scanner teclado = new Scanner (System.in);
+	do {
+	    System.out.print ("Introduzca una opciï¿½n (1-4): ");
+	    opcion = teclado.nextInt();
+	    if (opcion < 1 || opcion > 4)
+		   System.out.println ("Debe introducir un nï¿½mero entre 1 y 4");
+	   } while (opcion < 1 || opcion > 4);
+	return opcion;
+	}
 }
